@@ -109,20 +109,9 @@ Distro-specific one-liners
             sudo dnf install -y \
               scons \
               pkgconfig \
-              libX11-devel \
-              libXcursor-devel \
-              libXrandr-devel \
-              libXinerama-devel \
-              libXi-devel \
-              wayland-devel \
-              mesa-libGL-devel \
-              mesa-libGLU-devel \
-              alsa-lib-devel \
-              pulseaudio-libs-devel \
-              libudev-devel \
               gcc-c++ \
               libstdc++-static \
-              libatomic-static
+              wayland-devel
 
     .. tab:: FreeBSD
 
@@ -608,7 +597,7 @@ running ``scons -h``, then looking for options starting with ``builtin_``.
 
 .. warning::
 
-    When using system libraries, the resulting library is **not** portable
+    When using system libraries, the resulting binary is **not** portable
     across Linux distributions anymore. Do not use this approach for creating
     binaries you intend to distribute to others, unless you're creating a
     package for a Linux distribution.

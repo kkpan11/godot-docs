@@ -890,6 +890,8 @@ native or user class, or enum. Nested array types (like ``Array[Array[int]]``) a
     The only exception was made for the ``Array`` (``Array[Variant]``) type, for user convenience
     and compatibility with old code. However, operations on untyped arrays are considered unsafe.
 
+.. _doc_gdscript_packed_arrays:
+
 Packed arrays
 ^^^^^^^^^^^^^
 
@@ -1948,6 +1950,16 @@ Here's a class file example:
 If you want to use ``extends`` too, you can keep both on the same line::
 
     class_name MyNode extends Node
+
+Named classes are globally registered, which means they become available to use
+in other scripts without the need to ``load`` or ``preload`` them:
+
+.. code-block:: gdscript
+
+    var player
+
+    func _ready():
+        player = Character.new()
 
 .. note::
 
